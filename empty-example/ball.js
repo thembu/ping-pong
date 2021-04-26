@@ -15,18 +15,16 @@ function Ball(){
     }
 
     this.bounce = function(){
-        if(this.y < 0 || this.y > 300){
-            this.yspeed = this.yspeed * -1;
-        }
-
-        if(this.x === player.x + 30 && this.y>= player.y && this.y <= this.y + 40 ){
+        if(this.y < 0 || this.y > 300 && this.x > 300 || this.x < 0 ) this.yspeed = this.yspeed * -1; 
+        
+        if(this.x === player.x + 30 && this.y >=  player.y && this.y <= player.y + 40 ){
           
             this.xspeed = this.xspeed * -1;
             this.yspeed = this.yspeed *-1;
 
-        }
+    }
 
-        if(this.x === player2.x -25 && this.y >= player2.y && this.y <= this.y + 40){
+        if(this.x === player2.x -20 && this.y >= player2.y && this.y <= player2.y + 40){
             this.xspeed = this.xspeed * -1;
             this.yspeed = this.yspeed *-1;
 
