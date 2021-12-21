@@ -27,12 +27,10 @@ function draw() {
 
 function Player() {
 
-this.x = 10;
-this.y = 140;
 this.speed = 25;
 
 this.show = function(){
-rect(this.x,this.y,20,40);
+rect(mouseX,mouseY,20,40);
   }
 }
 
@@ -45,7 +43,7 @@ function updateBall(){
 }
 
 
-function keyPressed() {
+/*function keyPressed() {
   if(keyCode === 38 && keyIsPressed){
     player.y = player.y - player.speed;
   }
@@ -53,7 +51,7 @@ function keyPressed() {
     player.y = player.y + player.speed;
   }
 
-}
+}*/
 
 function restrict(){
   player.y = constrain(player.y,0,260)
