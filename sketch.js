@@ -26,11 +26,12 @@ function draw() {
 }
 
 function Player() {
-
+this.x = mouseX;
+this.y = mouseY;
 this.speed = 25;
 
 this.show = function(){
-rect(mouseX,mouseY,20,40);
+rect(this.x,this.y,20,40);
   }
 }
 
